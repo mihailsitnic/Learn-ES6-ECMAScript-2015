@@ -1,13 +1,13 @@
 'use strict';
 
-var deliveryBoy = {
-  name: 'John',
-  handleMessage: function(message, handler) {
-    handler(message);
-  },
-  receive: function() {
-    this.handleMessage('Hello ', message => console.log(message + this.name))
-  }
+var fs = [];
+
+for (let i = 0; i < 10; i++) {
+  fs.push(function() {
+    console.log(i);
+  })
 }
 
-deliveryBoy.receive();
+fs.forEach(function(f) {
+  f();
+})
