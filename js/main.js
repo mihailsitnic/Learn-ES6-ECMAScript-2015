@@ -1,16 +1,11 @@
 'use strict';
 
-var color = "red";
-var speed = 10;
+let first = [1,2,3];
+let second = [4,5,6];
+first.push(second);
+first.push(...second);
 
-var car = {
-  color,
-  speed,
-  go() {
-    console.log('vroom');
-  }
-}
-
-console.log(car.color);
-console.log(car.speed);
-car.go();
+console.log([1,2,3]);
+console.log(...[1,2,3]);
+console.log(first);
+console.log(...first);
