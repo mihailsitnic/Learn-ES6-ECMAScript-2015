@@ -1,11 +1,11 @@
 'use strict';
 
-let first = [1,2,3];
-let second = [4,5,6];
-function addThreeThings(a, b, c) {
-  let result = a + b + c;
-  console.log(result);
-}
+var solutation = 'Hello';
+var greeting = `${solutation}, World`;
 
-addThreeThings(...first);
-addThreeThings(...second);
+var x = 1;
+var y = 2;
+var equation = `${x} + ${y} = ${x + y}`
+
+console.log(greeting);
+console.log(equation);
