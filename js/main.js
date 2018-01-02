@@ -1,4 +1,16 @@
 'use strict';
 
-let recive = (complete = () => console.log('complete')) => complete();
-recive();
+var color = "red";
+var speed = 10;
+
+var car = {
+  color,
+  speed,
+  go() {
+    console.log('vroom');
+  }
+}
+
+console.log(car.color);
+console.log(car.speed);
+car.go();
