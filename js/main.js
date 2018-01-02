@@ -2,10 +2,10 @@
 
 let first = [1,2,3];
 let second = [4,5,6];
-first.push(second);
-first.push(...second);
+function addThreeThings(a, b, c) {
+  let result = a + b + c;
+  console.log(result);
+}
 
-console.log([1,2,3]);
-console.log(...[1,2,3]);
-console.log(first);
-console.log(...first);
+addThreeThings(...first);
+addThreeThings(...second);
