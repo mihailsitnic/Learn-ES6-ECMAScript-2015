@@ -1,15 +1,22 @@
 'use strict';
 
 function* greet() {
-  console.log(`You called 'next()'`);
-  yield 'Hello';
+  console.log(`greetors are 'lazy'`);
+  yield 'How';
+  console.log(`I'm not called until the second next`);
+  yield 'Are';
+  console.log(`Call me before 'you?'`);
+  yield 'You';
+  console.log(`Called when 'done'`);
 }
 
-let greeter = greet();
-console.log(greeter);
+var greeter = greet();
 
-let next = greeter.next();
-console.log(next);
+for (let word of greeter) {
+  console.log(word);
+}
 
-let done = greeter.next();
-console.log(done);
+// console.log(greeter.next());
+// console.log(greeter.next());
+// console.log(greeter.next());
+// console.log(greeter.next());
