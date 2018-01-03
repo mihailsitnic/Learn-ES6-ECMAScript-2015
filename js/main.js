@@ -1,22 +1,32 @@
 'use strict';
 
-function* graph() {
-  let x = 0;
-  let y = 0;
-  while(true) {
-    yield {x: x, y: y}
-    x += 2;
-    y += 1;
-  }
+var myMap = new Map();
+
+// API
+/*
+set()
+get()
+size
+clear()
+has()
+*/
+
+myMap.set('foo', 'bar');
+myMap.set('Hello', 'World!');
+// myMap.clear();
+
+console.log(myMap.get('foo'));
+console.log(myMap.has('foo'));
+console.log(myMap.size);
+
+for (var key of myMap.keys()) {
+  console.log(key);
 }
 
-var graphGenerator = graph();
+for (var value of myMap.values()) {
+  console.log(value);
+}
 
-console.log(graphGenerator.next().value);
-console.log(graphGenerator.next().value);
-console.log(graphGenerator.next().value);
-console.log(graphGenerator.next().value);
-console.log(graphGenerator.next().value);
-console.log(graphGenerator.next().value);
-console.log(graphGenerator.next().value);
-console.log(graphGenerator.next().value);
+for (var [key, value] of myMap.entries()) {
+  console.log(key + ' = ' + value);
+}
