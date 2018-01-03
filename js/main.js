@@ -1,15 +1,22 @@
 'use strict';
 
-function* greet() {
-  let friendly = yield 'How';
-  console.log(friendly);
-  yield 'Are';
-  yield 'You';
+function* graph() {
+  let x = 0;
+  let y = 0;
+  while(true) {
+    yield {x: x, y: y}
+    x += 2;
+    y += 1;
+  }
 }
 
-var greeter = greet();
+var graphGenerator = graph();
 
-
-console.log(greeter.next().value);
-console.log(greeter.next('the heck').value);
-console.log(greeter.next().value);
+console.log(graphGenerator.next().value);
+console.log(graphGenerator.next().value);
+console.log(graphGenerator.next().value);
+console.log(graphGenerator.next().value);
+console.log(graphGenerator.next().value);
+console.log(graphGenerator.next().value);
+console.log(graphGenerator.next().value);
+console.log(graphGenerator.next().value);
